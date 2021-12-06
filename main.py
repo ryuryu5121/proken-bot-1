@@ -48,12 +48,12 @@ def callback():
 
 
 @handler.add(MessageEvent, message=TextMessage)
-def handle_message(event):
-    # 基本的にここにコードを書いていきます。
-    message = event.message.text
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=message))
+# def handle_message(event):
+#     # 基本的にここにコードを書いていきます。
+#     message = event.message.text
+#     line_bot_api.reply_message(
+#         event.reply_token,
+#         TextSendMessage(text=message))
 
 def handle_message(event):
     if event.message.text =='時間割を教えて':
