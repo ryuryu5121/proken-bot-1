@@ -55,6 +55,7 @@ def handle_message(event):
         event.reply_token,
         TextSendMessage(text=message))
 
+# ここはいらない～ -------------------------------------------------------------------------------------------
 # def handle_message(event):
 #     if event.message.text =='時間割を教えて':
 #         day_list = ["月", "火", "水", "木", "金"]
@@ -66,6 +67,7 @@ def handle_message(event):
 #             event.reply_token,
 #             TextMessage(text=lesson[event.message.text])
 #         )
+# --------------------------------------------------------------------------------------------------------------
 
 
 if __name__ == "__main__":
