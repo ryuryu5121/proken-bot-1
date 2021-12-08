@@ -62,7 +62,10 @@ def handle_message(event):
 
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=return_message))
+        [
+        TextSendMessage(text="グー、チョキ、パーのどれかを入力してください"),
+        TextSendMessage(text=return_message)
+        ])
 
 # ここはいらない～ -------------------------------------------------------------------------------------------
 # def handle_message(event):
