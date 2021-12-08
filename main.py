@@ -52,6 +52,7 @@ def handle_message(event):
     # 基本的にここにコードを書いていきます。
     janken = ["グー","チョキー","パー"]
     message = event.message.text
+    print("グー、チョキ、パーのどれかを入力してください")
     if (message == "パー"):
         return_message = janken[1]
     elif (message == "チョキ"):
