@@ -58,17 +58,17 @@ def handle_message(event):
         return_message = janken[1]
         line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=return_message)
+        TextSendMessage(text=return_message))
     elif (message == "チョキ"):
         return_message = janken[0]
         line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=return_message)
+        TextSendMessage(text=return_message))
     elif (message == "グー"):
         return_message = janken[2]
         line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=return_message)
+        TextSendMessage(text=return_message))
     
     if (message == "スタート"):
         line_bot_api.reply_message(
@@ -77,7 +77,7 @@ def handle_message(event):
     
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=return_message)
+        TextSendMessage(text=return_message))
 
 
 # ここはいらない～ -------------------------------------------------------------------------------------------
