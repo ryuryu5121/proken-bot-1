@@ -50,10 +50,18 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     # 基本的にここにコードを書いていきます。
+    janken = ["グー","チョキー","パー"]
     message = event.message.text
+    if (message == "パー"):
+        return_message = janken[1]
+    elif (message == "チョキ"):
+        return_message = janken[0]
+    elif (message == "グー"):
+        return_message = janken[2]
+
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=message))
+        TextSendMessage(text=return_message))
 
 # ここはいらない～ -------------------------------------------------------------------------------------------
 # def handle_message(event):
