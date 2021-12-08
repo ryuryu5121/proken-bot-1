@@ -47,7 +47,6 @@ def callback():
     return 'OK'
 
 
-
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     # 基本的にここにコードを書いていきます。
