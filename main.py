@@ -52,7 +52,7 @@ def handle_message(event):
     # 基本的にここにコードを書いていきます。
     janken = ["グー","チョキー","パー"]
     message = event.message.text
-    print("グー、チョキ、パーのどれかを入力してください")
+    talk = "グー、チョキ、パーのどれかを入力してください"
 
     if (message == "パー"):
         return_message = janken[1]
@@ -63,6 +63,10 @@ def handle_message(event):
     
     if (message == "スタート"):
         line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=talk)
+    
+    line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=return_message)
 
